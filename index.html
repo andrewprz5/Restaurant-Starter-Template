@@ -54,21 +54,36 @@
       font-size: 3rem;
       margin-bottom: 0.5rem;
     }
+
     header p {
       font-size: 1.5rem;
       margin-bottom: 1rem;
     }
-    header .btn {
+
+    .hero-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .btn {
       background-color: #c59d5f;
       color: black;
       padding: 0.75rem 1.5rem;
       border-radius: 5px;
       font-weight: bold;
       transition: background-color 0.3s ease;
-      display: inline-block;
+      text-decoration: none;
     }
-    header .btn:hover {
+
+    .btn:hover {
       background-color: #b4884c;
+    }
+
+    .open-status {
+        margin-top: 1rem;
+        font-size: 1rem;
     }
 
     section {
@@ -84,17 +99,70 @@
       color: #c59d5f;
     }
 
+    #about {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 2rem;
+        padding: 3rem 20px;
+        background-color: #fff7f0;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .about-content {
+        flex: 1 1 500px;
+    }
+
+    #about h2 {
+        font-size: 2.5rem;
+    }
+
     #about p {
-      font-size: 1.1rem;
-      color: #555;
-      max-width: 700px;
-      margin: 0 auto;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #444;
+      margin-bottom: 1rem;
       text-align: center;
+    }
+
+    #about blockquote {
+        font-style: italic;
+        color: #666;
+        padding-left: 1rem;
+        margin: 2rem 0;
+        text-align: center;
+    }
+
+    .quote-author {
+        display: block;
+        font-weight: bold;
+        margin-top: 0.5rem;
+    }
+
+    .about-image img {
+        width: 100%;
+        border-radius: 10px;
+        max-width: 400px;
+        object-fit: cover;
     }
 
     #menu {
       background-color: #f9f9f9;
       padding: 3rem 20px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    #menu h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .menu-category {
+        margin-bottom: 2.5rem;
+        text-align: left;
     }
 
     .menu-grid {
@@ -108,21 +176,43 @@
       min-width: 280px;
     }
     .menu-column h3 {
-      font-size: 1.3rem;
-      margin-bottom: 0.75rem;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
       color: #444;
+      border-bottom: 2px solid #c59d5f;
+      padding-bottom: 0.5rem;
     }
+
     .menu-column ul {
       list-style: none;
+      padding-left: 0;
     }
 
     .menu-column li {
-      margin-bottom: 0.5rem;
-      font-size: 1rem;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.8rem;
+      font-size: 1.1rem;
       color: #555;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
+    
     .menu-column strong {
       color: #222;
+    }
+
+    .menu-column span {
+        margin-left: auto;
+        font-weight: bold;
+        color: #c59d5f;
+    }
+
+    
+    .menu-note {
+        font-size: 1rem;
+        color: #666;
+        margin-top: 2rem;
     }
 
     #contact {
@@ -147,6 +237,45 @@
     }
     #contact .btn:hover {
       background-color: #b4884c;
+    }
+
+    .map-container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    #testimonials {
+        background-color: #fff7f0;
+        padding: 3rem 20px;
+        text-align: center;
+    }
+
+    #testimonials h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .testimonial {
+        max-width: 700px;
+        margin: 0 auto 2rem auto;
+        padding: 1rem 1.5rem;
+        background-color: #fff;
+        border-left: 4px solid #c59d5f;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        border-radius: 6px;
+    }
+
+    .testimonial blockquote {
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #444;
+      margin-bottom: 0.5rem;
+    }
+
+    .testimonial cite {
+        display: block;
+        font-weight: bold;
+        color: #555;
     }
 
     footer {
@@ -179,65 +308,129 @@
     <header>
     <h1>Authentic Italian Comfort Food in Hawthorne, NJ</h1>
     <p>Family-owned since 1995. Handmade pastas, wood-fired pizzas, and warm hospitality.</p>
-    <a href="#menu" class="btn">See Our Menu</a>
+    <div class="hero-buttons">
+        <a href="#menu" class="btn">See Our Menu</a>
+        <a href="tel:1234567890" class="btn">Call to Order/Reserve</a>
+    </div>
+    <p class="open-status">Open Now - Closes at 9:00 PM</p>
   </header>
 
-  <section id="menu">
+  <section class="menu-column" id="menu">
     <h2>Our Menu</h2>
-    <h3>Popular Dishes</h3>
-    <ul id="popular-dishes">
-    </ul>
-    <h3>Drinks & Desserts</h3>
-    <ul id="drinks-desserts">
-    </ul>
+    <div class="menu-category">
+        <h3>Starters</h3>
+        <ul id="starters">
+
+        </ul>
+    </div>
+    <div class="menu-category">
+        <h3>Entrees</h3>
+        <ul id="entrees">
+
+        </ul>
+    </div>
+    <div class="menu-category">
+        <h3>Drinks & Desserts</h3>
+        <ul id="drinks-desserts">
+
+        </ul>
+    </div>
     <a href="tel:1234567890" class="btn">Call Now to Order</a>
+    <p class="menu-note">
+        View our full menu <a href="menu.pdf" target="_blank">here</a> or ask in-store for daily specials.
+    </p>
   </section>
 
   <section id="about">
-    <h2>About Us</h2>
-    <p>
-      We’re a family-owned Italian restaurant serving Hawthorne since 1995. Our recipes are passed down through generations and made fresh daily. Whether you’re here for a casual night out or celebrating something special, we make you feel at home.
-    </p>
+    <div class="about-content">
+        <h2>About Us</h2>
+        <p>
+            We’re a family-owned Italian restaurant serving Hawthorne since 1995. Our recipes are passed down through generations and made fresh daily. Whether you’re here for a casual night out or celebrating something special, we make you feel at home.
+        </p>
+        <p>
+            Every dish is made from scratch with fresh, high-quality ingredients — the same way Nonna used to cook. Whether you're dining in, picking up, or ordering for a celebration, we treat every guest like family.
+        </p>
+        <blockquote>
+        “Good food brings people together — and that’s what we’re here for.”<br>
+        <span class="quote-author">– Salvatore, Owner & Chef</span>
+        </blockquote>
+    </div>
+    
+    <!-- Optional: Photo of Owner or Restaurant -->
+    <div class="about-image">
+        <img src="https://media.istockphoto.com/id/1208770384/photo/cheerful-young-male-owner-holding-digital-tablet-while-standing-in-cafe.jpg?s=612x612&w=0&k=20&c=90N2TkbCoxbV0b_iYgRpQOveuS8Siyku2iq9PUGw7IE=" alt="Our Owner [Name]" loading="lazy">
+    </div>
   </section>
 
   <section id="contact">
     <h2>Contact & Hours</h2>
-    <p>123 Main Street, Hawthorne, NJ <br/>
-    <a href="https://maps.google.com" target="_blank">Get Directions</a></p>
-    <a href=""></a>
-    <p><a href="tel:1234567890">(123) 456-7890</a></p>
-    <p>Open Daily: 11am – 9pm</p>
+    <p>
+        <strong>Address:</strong>
+        123 Main Street, Hawthorne, NJ <br/>
+        <a href="https://maps.google.com" target="_blank">Get Directions</a>
+    </p>
+    <p>
+        <strong>Phone:</strong>
+        <a href="tel:1234567890">(123) 456-7890</a>
+    </p>
+    <p>
+        <strong>Open Daily:</strong>
+        11:00 AM - 9:00 PM
+    </p>
     <a href="tel:1234567890" class="btn">Call Now to Order</a>
+
+    <div clsas="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3046.8052695235425!2d-74.15700099999999!3d40.949246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c303b4a0ef3bcb%3A0xf8c09b10d1b709f5!2sHawthorne%2C%20NJ%2007506%2C%20USA!5e0!3m2!1sen!2sus!4v1721040000000!5m2!1sen!2sus" 
+        width="100%" height="300" style="border:0; margin-top: 2rem; border-radius: 8px;",
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
   </section>
 
   <section id="testimonials">
     <h2>What Our Customers Say</h2>
-    <blockquote>“Amazing food and super friendly staff. The best Italian in the area!” – Sarah J. (Google)</blockquote>
-    <blockquote>“Their tiramisu is to die for. I order it every time.” – Mark T.</blockquote>
+    <div class="testimonial">
+        <blockquote>“Amazing food and super friendly staff. The best Italian in the area!”</blockquote>
+        <cite>– Sarah J. (Google)</cite>
+    </div>
+    <div class="testimonial">
+        <blockquote>“Their tiramisu is to die for. I order it every time.”</blockquote>
+        <cite>- Mark T.</cite>
+    </div>
   </section>
 
   <footer>
     &copy; 2025 Restaurant Name. All rights reserved.
   </footer>
   <script>
+    const hour = new Date().getHours();
+    const statusText = document.querySelector('.open-status');
+    if (hour >= 11 && hour < 21) {
+        statusText.textContent = 'Open Now - Closes at 9:00 PM';
+    } else {
+        statusText.textContent = 'Closed - Opens at 11:00 AM';
+    }
+    
     fetch('menu.json')
     .then(res => res.json())
     .then(data => {
       const categories = {
-        "Popular Dishes": document.querySelector('#popular-dishes'),
+        "Entrees": document.querySelector('#entrees'),
+        "Starters": document.querySelector('#starters'),
         "Drinks & Desserts": document.querySelector('#drinks-desserts')
       };
 
       data.forEach(item => {
         const li = document.createElement('li');
         li.innerHTML = `
-        ${item.image ? `<img src="${item.image}" alt="${item.name}" style="width: 100px; height: auto; float: left; margin-right: 10px;">` : ''}
+        ${item.image ? `<img src="${item.image}" loading="lazy" alt="${item.name}" style="width: 100px; height: auto; object-fit: cover; margin-right: 10px; border-radius: 4px;">` : ''}
         <strong>${item.name}</strong> - ${item.description} <span>${item.price || ''}</span>`;
         if (categories[item.category]) {
           categories[item.category].appendChild(li);
         }
       });
     });
+
+    
   </script>
 </body>
 </html>

@@ -1,13 +1,13 @@
 [
   {
-    "category": "Popular Dishes",
+    "category": "Entrees",
     "name": "Margherita Pizza",
     "description": "Classic tomato + mozzarella",
     "price": "$12.99",
     "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGl6emElMjBtYXJnaGVyaXRhfGVufDB8fDB8fHww"
   },
   {
-    "category": "Popular Dishes",
+    "category": "Entrees",
     "name": "Pasta Alfredo",
     "description": "Creamy parmesan sauce",
     "price": "$10.99",
